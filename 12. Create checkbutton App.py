@@ -17,14 +17,11 @@ question_label.place(x=40, y=20)
 check1 = tk.Checkbutton(root, text="Coding Privacy", variable = var1, onvalue=1, offvalue=0)
 check1.place(x=40, y=40)
 
-
 check2 = tk.Checkbutton(root, text="RandomChannel", variable = var2, onvalue="RandomChannel", offvalue="No Input")
 check2.place(x=40, y=60)
 
-
 check3 = tk.Checkbutton(root, text="CodingPrivacy", variable = var3, onvalue=1, offvalue=0)
 check3.place(x=40, y=80)
-
 
 response = tk.Label(root)
 response.place(x=40, y=150)
