@@ -14,13 +14,13 @@ correct_answer = [1, "No Input", 1]
 question_label = tk.Label(root, text="What is the name of this YouTube channel?")
 question_label.place(x=40, y=20)
 
-check1 = tk.Checkbutton(root, text="Coding Privacy", variable = var1, onvalue=1, offvalue=0)
+check1 = tk.Checkbutton(root, text="Coding Privacy", variable=var1, onvalue=1, offvalue=0)
 check1.place(x=40, y=40)
 
-check2 = tk.Checkbutton(root, text="RandomChannel", variable = var2, onvalue="RandomChannel", offvalue="No Input")
+check2 = tk.Checkbutton(root, text="RandomChannel", variable=var2, onvalue="RandomChannel", offvalue="No Input")
 check2.place(x=40, y=60)
 
-check3 = tk.Checkbutton(root, text="CodingPrivacy", variable = var3, onvalue=1, offvalue=0)
+check3 = tk.Checkbutton(root, text="CodingPrivacy", variable=var3, onvalue=1, offvalue=0)
 check3.place(x=40, y=80)
 
 response = tk.Label(root)
@@ -34,12 +34,12 @@ def get_values():
     # else:
     #     response.config(text = "Incorrect answer !")
 
-    #approach 2
-    flag=0
+    # approach 2
+    flag = 0
     for i in range(0, len(correct_answer)):
-        if(correct_answer[i] != vars[i].get()):
+        if correct_answer[i] != vars[i]:
             flag = 1
-    if(flag==0):
+    if flag == 0:
         response.config(text="Correct answer !")
     else:
         response.config(text="Incorrect answer !")
@@ -47,7 +47,6 @@ def get_values():
 
 submitbtn = tk.Button(root, text="Submit", command=get_values)
 submitbtn.place(x=40, y=110)
-
 
 if __name__ == '__main__':
     root.mainloop()
